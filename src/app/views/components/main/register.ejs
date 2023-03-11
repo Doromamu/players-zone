@@ -1,0 +1,88 @@
+<section>
+  <div class="container">
+    <header>
+      <div class="row mt-5">
+        <div class="col-4 offset-4 mt-5">
+          <img src="/img/logomisa.png" class="d-block w-50 rounded mx-auto shadow-lg" alt="...">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 mt-2">
+          <spam class="h1 d-block">
+            Registro de nuevo usuario.
+          </spam>
+          <spam class="h5 d-md-block d-none">
+            Es necesario crear una cuenta en player zone, si
+            es que gustas, utilizar algunos de nuestros servicios que ofrecemos.
+          </spam>
+        </div>
+      </div>
+    </header>
+    <form class="needs-validation mt-4" action="/api/PlayerZone/user/register" novalidate method="post">
+      <div class="row">
+        <div class="col-md-3 mt-md-0 mt-4">
+          <input type="text" class="form-control" id="inputFirstName" name="firstName" placeholder="Primer nombre *"
+            required>
+        </div>
+        <div class="col-md-3 mt-md-0 mt-4">
+          <input type="text" class="form-control" id="inputLastName" name="lastName" placeholder="Segundo nombre">
+        </div>
+        <div class="col-md-3 mt-md-0 mt-4">
+          <input type="text" class="form-control" id="inputPaternalLastName" name="paternalLastName"
+            placeholder="Apellido Paterno*" required>
+        </div>
+        <div class="col-md-3 mt-md-0 mt-4">
+          <input type="text" class="form-control" id="inputMaternalLastName" name="MaternalLastName"
+            placeholder="Apellido Materno*" required>
+        </div>
+      </div>
+      <div class="row mt-0 mt-md-4">
+        <div class="col-md-2 mt-md-0 mt-4">
+          <input type="number" class="form-control" id="inputYearsOld" name="yearsOld" placeholder="Edad*" required>
+        </div>
+        <div class="col-md-5 mt-md-0 mt-4">
+          <div class="row">
+            <div class="col-md-5">
+              <label for="inputBirthdate" class="form-label d-md-inline d-block">Fecha de nacimiento: </label>
+            </div>
+            <div class="col-md-7">
+              <input type="date" class="form-control" id="inputBirthdate" name="birthdate" required>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 mt-md-0 mt-4">
+          <input type="number" class="form-control" id="inputPostalCode" name="postalCode" placeholder="Codigo postal*"
+            required>
+        </div>
+        <div class="col-md-3 mt-md-0 mt-4">
+          <input type="text" class="form-control" id="inputDomicile" name="domicile" placeholder="Domicilio*" required>
+        </div>
+      </div>
+      <div class="row mt-0 mt-md-4">
+        <div class="col-md-3 mt-md-0 mt-4">
+          <input type="text" class="form-control" id="inputUserName" name="userName" placeholder="Nombre de usuario*"
+            required>
+        </div>
+        <div class="col-md-3 mt-md-0 mt-4">
+          <input type="password" class="form-control" id="inputPassWord" name="passWord"
+            placeholder="Contraseña de usuario*" required>
+        </div>
+        <div class="col-md-6 mt-md-0 mt-4">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Usuario" aria-label="Username" name="userEmail" required>
+            <span class="input-group-text">@</span>
+            <input type="text" class="form-control" placeholder="Servicio de correo" aria-label="Server" name="emailService" required>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-0 mt-md-4">
+        <div class="col-md-6">
+          <button class="w-100 btn btn-primary btn-lg mt-5">Crear cuenta</button>
+        </div>
+        <div class="col-md-6">
+          <a class="w-100 btn btn-danger btn-lg mt-5" href="/api/PlayerZone/home">Cancelar</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>

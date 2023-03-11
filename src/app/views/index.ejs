@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="description" content="HTML basico">
+  <meta name="author" content="Angel Misael">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link rel="stylesheet" type="text/css" href="/css/anicollection.css">
+  <link rel="shortcut icon" href="/img/player-zone.jpg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Player Zone Shop</title>
+</head>
+
+<body>
+  <!--Cabezera del body-->
+  <header>
+    <!--Barra de navegacion del sitio web.-->
+    <nav class="navbar fixed-top navbar-expand-lg bg-light border-bottom border-primary border-5">
+      <% dirNavBar %>
+      <%-include(dirNavBar)%>
+    </nav>
+  </header>
+  <!--Main del body-->
+  <main>
+    <div class="container-flexd text-center">
+      <% dirMain %>
+      <%-include(dirMain)%>
+    </div>
+  </main>
+  <!--El footer del body-->
+  <footer class="text-center text-lg-start bg-light text-muted mt-5 container-fluid">
+    <% dirFooter %>
+    <%-include(dirFooter)%>
+  </footer>
+  
+  <script type="text/javascript" src="/js/anijs.js"></script>
+  <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/js/script.js"></script>
+</body>
+
+</html>

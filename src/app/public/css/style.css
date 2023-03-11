@@ -1,0 +1,152 @@
+/*Variables CSS*/
+:root {
+	--color-1: #f9f9f9;
+	--color-2: #656363;
+	--gradient: linear-gradient(to right, hsla(136, 6%, 49%, 0.904), hsla(220, 7%, 39%, 0.664));
+	--webkit: -webkit-linear-gradient(to right, hsla(136, 6%, 49%, 0.904), hsla(220, 7%, 39%, 0.664));
+}
+ 
+body {
+  background-color: var(--bs-gray-400);
+}
+
+.icon {
+	width: 2rem;
+	height: 2rem;
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.dropdown-item {
+	color: var(--color-2);
+	display: block;
+}
+
+.dropdown-item:hover {
+	color: #e0d4d4;
+	background-color: var(--bs-gray-700);
+}
+
+.text-justify{
+	text-align: justify;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: var(--color-1);
+	min-width: 18.75rem;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+/*Fondo para la presentacion de los equipo gamers.*/
+.bg-1 {
+	background: var(--webkit), url('../img/equipo-gamer.jpeg');
+	background: var(--gradient), url('../img/equipo-gamer.jpeg');
+	background-size: cover;
+}
+/*Fondo de logo de la tienda PlayerZOne*/
+.bg-2 {
+	background: var(--webkit), url('../img/logomisa.jpg');
+	background: var(--gradient), url('../img/logomisa.jpg');
+	background-size: cover;
+}
+/*Fondo para la presentacion de juegos para niños*/
+.bg-3 {
+	background: var(--webkit), url('../img/children-gabfd3e4e6_1920.jpg');
+	background: var(--gradient), url('../img/children-gabfd3e4e6_1920.jpg');
+	background-size: cover;
+}
+/*Fondo para la presentacion de comunida gamer*/
+.bg-4 {
+	background: var(--webkit), url('../img/comunidad-gamer.jpg');
+	background: var(--gradient), url('../img/comunidad-gamer.jpg');
+	background-size: cover;
+}
+/*Fondo para la presentacion de juegos de terror*/
+.bg-5{
+	background: var(--webkit), url('../img/terror.jpeg');
+	background: var(--gradient), url('../img/terror.jpeg');
+	background-size: cover;
+}
+/*Fondo para la presentacion de juegos shooter*/
+.bg-6{
+	background: var(--webkit), url('../img/Shooter.jpg');
+	background: var(--gradient), url('../img/Shooter.jpg');
+	background-size: cover;
+}
+/*Fondo para la presentacion de juegos arcade*/
+.bg-7{
+	background: var(--webkit), url('../img/arcade.jpeg');
+	background: var(--gradient), url('../img/arcade.jpeg');
+	background-size: cover;
+}
+/*Fondo para la presentacion de juegos free to play*/
+.bg-8{
+	background: var(--webkit), url('../img/FreeToPlaysGames-1.jpg');
+	background: var(--gradient), url('../img/FreeToPlaysGames-1.jpg');
+	background-size: cover;
+}
+.vignette {
+	background: #9c143d;
+	color: #fff;
+	border-radius: 50%;
+	display: inline-block;
+	text-align: center;
+	width: 40px;
+	height: 40px;
+	padding: 2px;
+	box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+	margin-right: 5px;
+}
+
+.pagrhap-size {
+	font-size: 1.5em;
+}
+
+/* Carousel base class */
+.my-carousel {
+	margin-bottom: 2rem;
+}
+
+/* Since positioning the image, we need to help out the caption */
+.my-carousel-caption {
+	bottom: 3rem;
+	z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.my-carousel-item {
+	height: 32rem;
+}
+
+/*!: Se tiene que trabajar la responsividad con BrackPoints*/
+@media (max-width: 768px) {
+	.bg-1 {
+		background: var(--webkit), url('../img/pexels-pixabay-159438.jpg');
+		background: var(--gradient), url('../img/pexels-pixabay-159438.jpg');
+		background-size: cover;
+	}
+
+	.bg-2 {
+		background: var(--webkit), url('../img/pexels-pixabay-159438.jpg');
+		background: var(--gradient), url('../img/pexels-pixabay-159438.jpg');
+		background-size: cover;
+	}
+}
+
+@media (max-width: 1200px) {
+	.pagrhap-size {
+		font-size: 1.1em;
+	}
+}
+
+/*!: ---------------------------------------------------------*/

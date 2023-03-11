@@ -1,0 +1,39 @@
+<section>
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col-lg-6 offset-lg-3 mt-5">
+        <div class="card shadow-lg">
+          <div class="card-body">
+            <header>
+              <span class="text-center text-title h1">
+                Iniciar secion.
+              </span>
+            </header>
+            <form class="needs-validation mt-4" action="/api/PlayerZone/user/login" method="POST" novalidate>
+              <div class="mb-5 mt-4 position-relative">
+                <input type="text" class="form-control" id="inputUserName" name="userName" required placeholder="Nombre de usuario con menos de 17 caracteres">
+                <div class="invalid-tooltip">
+                  Porfavor escriba su nombre de usuario &#128517
+                </div>
+              </div>
+              <div class="mb-5 mt-5 position-relative">
+                <input type="password" class="form-control" id="exampleInputPassword1" name="passWord" required placeholder="Contraseña con menos de 17 caracteres">
+                <div class="invalid-tooltip">
+                  Porfavor escriba su contraseña &#128517
+                </div>
+              </div>
+              <div class="row mt-4">
+                <div class="col-lg-10 offset-lg-1">
+                  <button type="submit" class="btn btn-primary btn-block mt-md-0 mt-2">Iniciar Sección</button>
+                  <a href="/api/PlayerZone/home" class="btn btn-danger  text-color-white mt-md-0 mt-2">Cancelar.</a>
+                  <a href="/api/PlayerZone/user/register"
+                    class="btn btn-success  text-color-white mt-md-0 mt-2">Reguistrace.</a>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
