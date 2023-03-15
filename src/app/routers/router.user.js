@@ -21,6 +21,11 @@ userRouter.get(
   userControl.getViewElectronicWallet
 );
 
+userRouter.get(
+  '/user/notFound',
+  userControl.getViewUserNotFound
+);
+
 userRouter.post(
   '/user/register',
   userRule.registerRule,

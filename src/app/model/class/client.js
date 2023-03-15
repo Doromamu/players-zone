@@ -6,7 +6,7 @@ export class Client{
   #maternalLastName;
   #yearsOld;
   #birthDate;
-  #postalCode;
+  #postalCode;  
   #domicile;
   #user;
   constructor(_id,_firtsName,_lastName,_paternalLastName,_maternalLastName,_yearsOld,
@@ -21,7 +21,7 @@ export class Client{
       this.#postalCode = _postalCode;
       this.#domicile = _domicile;
       this.#user = _user;
-  }
+  } 
 
   /*Getters*/
   getId(){

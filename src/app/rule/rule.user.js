@@ -6,7 +6,7 @@ const registerRule = [
       return true;
     }else{
       return false;
-    }
+    }  
   }),
   check('lastName').custom(lastName =>{
     if(lastName.length < 18){
@@ -65,14 +65,14 @@ const registerRule = [
     }
   }),
   check('userEmail').custom(userEmail => {
-    if(userEmail.length < 18){
+    if(userEmail.length < 30){
       return true;
     }else{
       return false;
     }
   }),
   check('emailService').custom(emailService => {
-    if(emailService.length < 18){
+    if(emailService.length <= 10){
       return true;
     }else{
       return false;
@@ -82,14 +82,14 @@ const registerRule = [
 
 const loginRule = [
   check('userName').custom(userName => {
-    if(userName.length < 30){
+    if(userName.length < 18){
       return true;
     }else{
       return false;
     }
   }),
   check('passWord').custom(userPassWord =>{
-    if(userPassWord.length <= 10){
+    if(userPassWord.length < 18){
       return true;
     }else{
       return false;

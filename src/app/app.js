@@ -9,6 +9,9 @@ const app = express();
 const PORT = 3000 || process.env.PORT;
 const defaultRoute = '/api/PlayerZone';
 
+//TODO: Variables
+let data;
+
 //TODO: Se definira el puerto
 app.set('port', PORT);
 
@@ -29,7 +32,8 @@ app.use(defaultRoute,userRouter);
 
 //TODO: Se renderiza la pagina de la tienda.
 app.get(defaultRoute + '/discount', (req,res) => { 
-  res.render('index',{
+  res.status(200).render('index',{
+    data : data,
     dirNavBar : 'components/nav-bar/nav-bar',
     dirMain : 'components/main/discount',
     dirFooter : 'components/footer/footer'
@@ -38,7 +42,8 @@ app.get(defaultRoute + '/discount', (req,res) => {
 
 //TODO: Se renderiza la pagina de informacion sobre el sitio web.
 app.get(defaultRoute + '/info', (req,res) => {
-  res.render('index',({
+  res.status(200).render('index',({
+    data : data,
     dirNavBar : 'components/nav-bar/nav-bar',
     dirMain : 'components/main/info',
     dirFooter : 'components/footer/footer'
@@ -47,16 +52,18 @@ app.get(defaultRoute + '/info', (req,res) => {
 
 //TODO: Se renderizara la pagina de home de nuestro sitio web.
 app.get(defaultRoute + '/home' ,(req,res) => {
-  res.render('index',{
+  res.status(200).render('index',{
+    data : data,
     dirNavBar : 'components/nav-bar/nav-bar',
     dirMain : 'components/main/home',
     dirFooter : 'components/footer/footer'
   });
-}); 
+});  
 
 //TODO: Ruta del error 404
 app.use('/', (req,res) => {
-  res.render('index',{
+  res.status(404).render('index',{
+    data : data,
     dirNavBar : 'components/nav-bar/nav-bar',
     dirMain : 'components/main/err404',
     dirFooter : 'components/footer/footer'
