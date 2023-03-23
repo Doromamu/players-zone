@@ -3,14 +3,12 @@ import morgan from 'morgan';
 
 //Import de los Routers
 import userRouter from './routers/router.user';
+import storeRouter from './routers/router.store';
 
 //TODO: Constantes
 const app = express();
 const PORT = 3000 || process.env.PORT;
-const defaultRoute = '/api/PlayerZone';
-
-//TODO: Variables
-let data;
+const basePath = '/api/players-zone';
 
 //TODO: Se definira el puerto
 app.set('port', PORT);
@@ -28,37 +26,8 @@ app.use(express.urlencoded({
 }));
 
 //TODO: Se agregan los routers
-app.use(defaultRoute,userRouter);
-
-//TODO: Se renderiza la pagina de la tienda.
-app.get(defaultRoute + '/discount', (req,res) => { 
-  res.status(200).render('index',{
-    data : data,
-    dirNavBar : 'components/nav-bar/nav-bar',
-    dirMain : 'components/main/discount',
-    dirFooter : 'components/footer/footer'
-  });
-});
-
-//TODO: Se renderiza la pagina de informacion sobre el sitio web.
-app.get(defaultRoute + '/info', (req,res) => {
-  res.status(200).render('index',({
-    data : data,
-    dirNavBar : 'components/nav-bar/nav-bar',
-    dirMain : 'components/main/info',
-    dirFooter : 'components/footer/footer'
-  }));
-}); 
-
-//TODO: Se renderizara la pagina de home de nuestro sitio web.
-app.get(defaultRoute + '/home' ,(req,res) => {
-  res.status(200).render('index',{
-    data : data,
-    dirNavBar : 'components/nav-bar/nav-bar',
-    dirMain : 'components/main/home',
-    dirFooter : 'components/footer/footer'
-  });
-});  
+app.use(basePath + '/client',userRouter);
+app.use(basePath + '/store',storeRouter)
 
 //TODO: Ruta del error 404
 app.use('/', (req,res) => {
@@ -68,5 +37,5 @@ app.use('/', (req,res) => {
     dirMain : 'components/main/err404',
     dirFooter : 'components/footer/footer'
   });
-} );
+});
 export default app;

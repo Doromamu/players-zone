@@ -64,6 +64,13 @@ export class Client{
     return this.#user;
   }
 
+  getFullName(){
+    return this.#firstName + 
+           this.#lastName + 
+           this.#paternalLastName + 
+           this.#maternalLastName;
+  }
+
   /*Setters*/
   setFirstName(newFirstName){
     this.#firstName = newFirstName;

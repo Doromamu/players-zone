@@ -7,33 +7,33 @@ import { userFilter } from "../filter-system/user-filter";
 const userRouter = Router();
 
 userRouter.get(
-  '/user/login',
+  '/login',
   userControl.getViewUserLogin
 );
 
 userRouter.get(
-  '/user/register',
+  '/register',
   userControl.getViewUserRegister
 );
 
 userRouter.get(
-  '/user/electronicwallet',
+  '/electronicwallet',
   userControl.getViewElectronicWallet
 );
 
 userRouter.get(
-  '/user/notFound',
+  '/notFound',
   userControl.getViewUserNotFound
 );
 
 userRouter.post(
-  '/user/register',
+  '/register',
   userRule.registerRule,
   userControl.createAccountUser
 );
 
 userRouter.post(
-  '/user/login',
+  '/login',
   userRule.loginRule,
   userControl.loginUser
 );
