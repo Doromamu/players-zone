@@ -1,6 +1,6 @@
 <div class="container-fluid">
-  <a class="navbar-brand" href="/api/players-zone/store/home">Home
-    <img src="/img/player-zone.jpg" class="img-fluid icon rounded">
+  <a class="navbar-brand" href="/api/players-zone/store/home">
+    <i class="fa-solid fa-house fa-xl"></i>
   </a>
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -8,38 +8,80 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-      <li class="nav-item ms-3">
-        <a class="nav-link" href="/api/players-zone/client/login">Iniciar Sección</a>
-      </li>
-      <li class="nav-item ms-3">
-        <div class="nav-link dropdown">
-          Categorias <i class="fa-solid fa-gamepad"></i>
-          <div class="dropdown-content rounded border border-4">
-            <div class="row">
-              <div class="col-lg-12">
-                <a class="nav-item text-center rounded dropdown-item">Shooter</a>
-                <a class="nav-item text-center rounded dropdown-item">Terror</a>
-                <a class="nav-item text-center rounded dropdown-item">Arcade</a>
-                <a class="nav-item text-center rounded dropdown-item">Free to play</a>
-                <a class="nav-item text-center rounded dropdown-item">Juegos AAA</a>
+      <li id="user" class="nav-item ms-3 w-25">
+        <div class="nav-link">
+          <span class="d-lg-none d-inline">
+            Usuario
+          </span>
+          <div class="dropdown">
+            <i class="fa-solid fa-user fa-xl" title="Iniciar Sección"></i>
+            <div id="user-box" class="dropdown-content rounded border border-4 bg-light">
+              <div class="row mx-2">
+                <div href="#" class="nav-item text-center rounded">
+                  <div class="col-lg-12">
+                    <div class="border-bottom border-primary border-2">
+                      <figure>
+                        <img src="/img/user-img.jpg"
+                          class="figure-img w-25 img-fluid rounded-circle border border-3 mt-2">
+                        <figcaption>
+                          Usuario desconocido
+                        </figcaption>
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+                <a href="/api/players-zone/client/login" class="nav-item text-center rounded dropdown-item">
+                  <i class="fa-solid fa-right-to-bracket"></i>
+                  <span>
+                    Inciar Sesión
+                  </span>
+                </a>
               </div>
             </div>
           </div>
         </div>
       </li>
-      <li class="nav-item ms-3">
-        <a class="nav-link" href="/api/players-zone/client/discount">Promosiones</a>
+      <li id="categories" class="nav-item ms-3 w-35">
+        <div class="nav-link">
+          <span class="d-lg-none d-inline dropdown-label">
+            Categorias
+          </span>
+          <div class=" dropdown">
+            <i class="fa-solid fa-gamepad fa-xl" title="Categorias "></i>
+            <div id="categories-box" class="dropdown-content rounded border border-4">
+              <div class="row">
+                <div class="col-lg-12">
+                  <a class="nav-item text-center rounded dropdown-item">Shooter</a>
+                  <a class="nav-item text-center rounded dropdown-item">Terror</a>
+                  <a class="nav-item text-center rounded dropdown-item">Arcade</a>
+                  <a class="nav-item text-center rounded dropdown-item">Free to play</a>
+                  <a class="nav-item text-center rounded dropdown-item">Juegos AAA</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </li>
-      <li class="nav-item ms-3">
-        <a class="nav-link" href="/api/players-zone/client/electronicwallet">Cartera Electronica</a>
+      <li class="nav-item ms-3 w-40">
+        <a class="nav-link" href="/api/players-zone/store/discount">
+          <span class="d-lg-none d-inline dropdown-label">
+            Promosiones
+          </span>
+          <i class="fa-solid fa-tags fa-xl" title="Promosiones"></i>
+        </a>
       </li>
-      <li class="nav-item ms-3">
-        <a class="nav-link" href="/api/players-zone/store/info">Sobre nosotros</a>
+      <li class="nav-item ms-3 w-45">
+        <a class="nav-link" href="/api/players-zone/store/info">
+          <span class="d-lg-none d-inline dropdown-label">
+            Sobre nosotros
+          </span>
+          <i class="fa-solid fa-circle-info fa-xl" title="Sobre nosotros"></i>
+        </a>
       </li>
     </ul>
     <form class="d-flex" role="search">
       <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success" type="submit">Search</button>
+      <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass fa-xl"></i></button>
     </form>
   </div>
 </div>

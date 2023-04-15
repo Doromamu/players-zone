@@ -69,9 +69,44 @@
         </div>
         <div class="col-md-6 mt-md-0 mt-4">
           <div class="input-group">
-            <input type="text" class="form-control" placeholder="Usuario" aria-label="Username" name="userEmail" required>
+            <input type="text" class="form-control" placeholder="Usuario" aria-label="Username" name="userEmail"
+              required>
             <span class="input-group-text">@</span>
-            <input type="text" class="form-control" placeholder="Servicio de correo" aria-label="Server" name="emailService" required>
+            <input type="text" class="form-control" placeholder="Servicio de correo" aria-label="Server"
+              name="emailService" required>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-md-6 offset-md-3">
+          <!-- Modal -->
+          <div class="modal fade" id="modal-drag-drop" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <span class="modal-title fs-5">Archivo no soportado</span>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div  class="modal-body">
+                  ...
+                </div>
+                <div class="modal-footer">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Cierre del Modal-->
+          <span class="fs-2 text-center">Imagen de Usuario</span>
+          <div id="drag-drop-area" class="container-drag-drop drag-inactive rounded">
+            <div id="file-button" class="fw-bold font-monospace rounded">
+              <strong class="fs-4 p-2">
+                Escoja una imagen
+              </strong>
+            </div>
+            <br>
+            <span id="drag-drog-text">ó arrastre un archivo JPG o PNG.</span>
+            <input id="input-img" class="form-control" type="file" hidden required>
           </div>
         </div>
       </div>
@@ -80,9 +115,11 @@
           <button class="w-100 btn btn-primary btn-lg mt-5">Crear cuenta</button>
         </div>
         <div class="col-md-6">
-          <a class="w-100 btn btn-danger btn-lg mt-5" href="/api/players-zone/home">Cancelar</a>
+          <a class="w-100 btn btn-danger btn-lg mt-5" href="/api/players-zone/client/login">Cancelar</a>
         </div>
       </div>
     </form>
   </div>
 </section>
+
+<script type="text/javascript" src="/js/event/event.drag-drop.js"></script>

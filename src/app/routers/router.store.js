@@ -41,4 +41,38 @@ storeRouter.get(
   }
 )
 
+storeRouter.get(
+  '/categories/shotter',
+  (req,res) => {
+
+  }
+);
+
+storeRouter.get(
+  '/categories/terror',
+  (req,res) => {
+    
+  }
+);
+
+storeRouter.get(
+  '/categories/arcade',
+  (req,res) => {
+    
+  }
+);
+
+storeRouter.get(
+  '/categories/free-to-play',
+  (req,res) => {
+    
+  }
+);
+
+storeRouter.get(
+  '/categories/AAA-games',
+  (req,res) => {
+    
+  }
+);
 export default storeRouter;

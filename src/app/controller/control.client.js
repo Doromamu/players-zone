@@ -85,4 +85,4 @@ export const userControl = {
   getViewUserNotFound,
   createAccountUser,
   loginUser
-};
+}; 

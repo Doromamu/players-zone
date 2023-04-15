@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { userControl } from "../controller/control.user";
+import { userControl } from "../controller/control.client";
 import { userRule } from "../rule/rule.user";
 import { userFilter } from "../filter-system/user-filter";
 

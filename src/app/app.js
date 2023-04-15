@@ -2,13 +2,16 @@ import express from 'express';
 import morgan from 'morgan';
 
 //Import de los Routers
-import userRouter from './routers/router.user';
+import userRouter from './routers/router.client';
 import storeRouter from './routers/router.store';
 
 //TODO: Constantes
 const app = express();
 const PORT = 3000 || process.env.PORT;
 const basePath = '/api/players-zone';
+
+//TODO: Variables
+let data;
 
 //TODO: Se definira el puerto
 app.set('port', PORT);
